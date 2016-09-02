@@ -14,7 +14,7 @@ DeleteFiles.prototype.delete = function(success, fail, options) {
 		options = {};
 	}
 
-	return cordova.exec(success, fail, "DeleteFiles", "getPictures", [options]);
+	return cordova.exec(success, fail, "DeleteFiles", "delete", [options]);
 };
 
 window.deleteFiles = new DeleteFiles();
