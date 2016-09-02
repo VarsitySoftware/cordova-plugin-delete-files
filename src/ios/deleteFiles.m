@@ -32,3 +32,4 @@
     [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
     
 }
+@end
