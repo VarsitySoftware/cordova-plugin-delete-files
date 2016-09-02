@@ -15,7 +15,7 @@
 {
    NSArray* tmpDirectory = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:NSTemporaryDirectory() error:NULL];
     for (NSString *file in tmpDirectory) {
-		if ([file hasPrefix:@"cdv_photo_"])
+	if ([file hasPrefix:@"cdv_photo_"] || [file hasPrefix:@"cdv_video_"] )
 		{
 			NSLog(@"REMOVING FILE: %@", file);    
 			[[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), file] error:NULL];
