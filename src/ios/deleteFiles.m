@@ -13,10 +13,13 @@
 
 - (void)clearTempDirectory
 {
-    NSArray* tmpDirectory = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:NSTemporaryDirectory() error:NULL];
+   NSArray* tmpDirectory = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:NSTemporaryDirectory() error:NULL];
     for (NSString *file in tmpDirectory) {
-		NSLog(@"REMOVING FILE: %@", file);    
-        [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), file] error:NULL];
+		if ([file hasPrefix:@"cdv_photo_"])
+		{
+			NSLog(@"REMOVING FILE: %@", file);    
+			[[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), file] error:NULL];
+		}
     }
 }
 
