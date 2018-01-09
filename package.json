@@ -1,0 +1,20 @@
+{
+    "version": "0.0.1",
+    "name": "cordova-plugin-delete-files",
+    "cordova_name": "Cordova Delete Files",
+    "description": "Cordova Delete Files",
+    "license": "MIT",
+    "repo": "https://github.com/VarsitySoftware/cordova-plugin-delete-files.git",
+    "keywords": [
+        "cordova",
+        "ios",
+        "UIStatusBarHidden",
+        "UIViewControllerBasedStatusBarAppearance",
+        "ios9"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [],
+    "englishdoc": ""
+}
